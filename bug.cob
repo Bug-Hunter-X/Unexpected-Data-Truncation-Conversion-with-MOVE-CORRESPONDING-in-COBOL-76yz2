@@ -1,0 +1,3 @@
+MOVE CORRESPONDING WS-RECORD TO DB-RECORD.
+
+This seemingly innocuous statement can lead to unexpected behavior if the structures WS-RECORD and DB-RECORD have fields with different data types or lengths, even if the names match.  COBOL's MOVE CORRESPONDING will perform a data conversion in some cases, leading to truncation or unexpected results if data is not properly handled during conversion.  This is particularly problematic with packed decimal and zoned decimal fields, as well as differing lengths of alphanumeric fields.
